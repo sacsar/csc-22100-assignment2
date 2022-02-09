@@ -41,8 +41,8 @@ Write a program that does the following:
 - Implement the `Simulator` class.
 - Write at least two (non-trivial!) tests for your `Automaton` class
 
-|---|---|
 | Item | Points |
+|:---|:---|
 | Javadoc and comments explaining main points | 2 |
 | Throws an exception if incorrect or invalid number of arguments | 2 |
 | Code readability and style | 2 |
