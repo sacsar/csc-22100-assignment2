@@ -32,6 +32,12 @@ Write a program that does the following:
   - if a cell is on the edge of the array, consider its left/right neighbor always 'off'
   - use X to indicate an 'on' cell and O to indicate an 'off' cell
   - if the number of iterations is 0, you should write the starting state
+
+### Submission
+
+For this assignment, I'm going to ask you to upload *two* things to Blackboard:
+- the same zip file we used in assignment 1 (you can copy-and-paste the `packageAssignment` file into `build.gradle.kts` if I haven't added it by the time you start)
+- a PDF of your source code (instructions to come--I'll make an Announcement on Blackboard)
   
 ### Requirements/Grading
 - Implement the `Automaton` class. The precise details are up to you, but you should implement the methods as described in the UML diagram:
