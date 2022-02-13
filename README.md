@@ -12,7 +12,7 @@ Elementary cellular automata are cellular automata with a single dimension where
 
 There are 8 (2x2x2) possible states for a cell and its two neigbors. To define an elementary cellular automaton, for each of these eight states, we need to decide if the center cell is on or off in the next generation. This means there are 2^8=256 possible rules defining cellular automata.
 
-Each number from 0 to 255 can then be interpreted as a _Wolfram code_ defining a cellular automaton. We start by writing down the eight possible states for a cell and its neighbors (the order matters!). 
+Each number from 0 to 255 can then be interpreted as a _Wolfram code_ defining a cellular automaton. We start by writing down the eight possible states for a cell and its neighbors (the order matters!).
 
 | 111 | 110 | 101 | 100 | 011 | 010 | 001 | 000 |
 
@@ -20,7 +20,7 @@ Next, we take our integer and translate it into binary. For example, suppose we 
 
 ![Rule 37](./rule37.png)
 
-(*Implementation hint*: Note that the states are labeled by the binary representations of 7,6,5,...,0. How can you use this 
+(*Implementation hint*: Note that the states are labeled by the binary representations of 7,6,5,...,0. How can you use this
 information to help store the transition rules?)
 
 ## Instructions
@@ -38,7 +38,7 @@ Write a program that does the following:
 For this assignment, I'm going to ask you to upload *two* things to Blackboard:
 - the same zip file we used in assignment 1 (you can copy-and-paste the `packageAssignment` file into `build.gradle.kts` if I haven't added it by the time you start)
 - a PDF of your source code (instructions to come--I'll make an Announcement on Blackboard)
-  
+ 
 ### Requirements/Grading
 - Implement the `Automaton` class. The precise details are up to you, but you should implement the methods as described in the UML diagram:
 
@@ -47,15 +47,15 @@ For this assignment, I'm going to ask you to upload *two* things to Blackboard:
 - Implement the `Simulator` class.
 - Write at least two (non-trivial!) tests for your `Automaton` class
 
-| Item | Points |
-|:---|:---|
-| Javadoc and comments explaining main points | 2 |
-| Throws an exception if incorrect or invalid number of arguments | 2 |
-| Code readability and style | 2 |
-| `Automaton` tests | 2 | 
-| Code compiles | 1 |
-| Tests pass | 1 |
-| Correctness: Hidden test cases | 3 |
+| Item                                                            | Points |
+|:----------------------------------------------------------------|:-------|
+| Javadoc and comments explaining main points                     | 2      |
+| Throws an exception if incorrect or invalid number of arguments | 2      |
+| Code readability and style                                      | 2      |
+| `Automaton` tests                                               | 2      |
+| Code compiles                                                   | 1      |
+| Tests pass                                                      | 1      |
+| Correctness: Hidden test cases                                  | 3      |
 
 ### Sample executions
 
