@@ -6,6 +6,9 @@
  * User Manual available at https://docs.gradle.org/7.3.3/userguide/building_java_projects.html
  */
 
+// TODO: Fill in your name here
+val YOUR_NAME = "YOUR_NAME_HERE"
+
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     application
@@ -33,8 +36,35 @@ tasks.named<Test>("test") {
 }
 
 
+
 tasks.named<Jar>("jar") {
     manifest {
         attributes["Main-Class"] = "csc22100.cellularautomata.Main"
     }
+}
+
+tasks.register<Zip>("packageAssignment") {
+    archiveFileName.set("${project.name}-$YOUR_NAME.zip")
+    from(layout.projectDirectory) {
+        include("*.gradle.kts")
+        include("src/**")
+        include("gradle/**")
+        include("gradlew*")
+    }
+
+    outputs.upToDateWhen { false }
+
+    finalizedBy(tasks.getByPath("copyZip"))
+}
+
+tasks.register<Copy>("copyZip") {
+    from(tasks.getByName<Zip>("packageAssignment").outputs)
+
+    destinationDir = layout.projectDirectory.asFile
+}
+
+tasks.register<JavaExec>("source2pdf") {
+    classpath = files("${project.projectDir}/source2pdf-all.jar")
+
+    args = listOf("src", "-o", "./$YOUR_NAME.pdf")
 }

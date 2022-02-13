@@ -36,8 +36,9 @@ Write a program that does the following:
 ### Submission
 
 For this assignment, I'm going to ask you to upload *two* things to Blackboard:
-- the same zip file we used in assignment 1 (you can copy-and-paste the `packageAssignment` file into `build.gradle.kts` if I haven't added it by the time you start)
-- a PDF of your source code (instructions to come--I'll make an Announcement on Blackboard)
+- run `./gradlew packageAssignment` to build the same sort of zip file as we did in assignment 1
+- Download `source2pdf-all.jar` from Blackboard and put it in the root directory of your assignment (i.e. the one with `gradlew` in)
+- run `/.gradlew source2pdf` to generate a PDF of your source code. You can also build your pdf by running the sourc2pdf jar manually.
  
 ### Requirements/Grading
 - Implement the `Automaton` class. The precise details are up to you, but you should implement the methods as described in the UML diagram:
